@@ -2,13 +2,16 @@
   "name": "composite-lambda-function",
   "version": "1.0.0",
   "description": "AWS lambda function to update composite datastore",
-  "main": "index.mjs",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "build": "npm install && zip -r build/lambda-deployment-package.zip . -x '*.git*' -x '.env' -x 'README.md'"
+    "start": "node scripts/start.js",
+    "build": "npm install && zip -r build/lambda-deployment-package.zip . -x '*.git*' -x '.env' -x 'scripts'  -x 'README.md'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alchemy-sdk": "^3.1.2",
     "axios": "^1.6.7",
     "dotenv": "^16.4.1",
     "ethers": "^5.7"
