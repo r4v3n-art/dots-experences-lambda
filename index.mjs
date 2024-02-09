@@ -182,9 +182,11 @@ const hasuraGraphQlCall = async (query, variables, jwt, operationName) => {
     }
 }
 
+const abProjectID = (contract, projectId) => `${contract.toLowerCase()}-${projectId}`;
+
 const getProjectInfo = async (contract, projectId) => {
     try {
-        const response = await graphQlCall(getProjectInfoQuery, { projectId: `${contract}-${projectId}` });
+        const response = await graphQlCall(getProjectInfoQuery, { projectId: abProjectID(contract, projectId)});
 
         const projectData = response.data.data.project;
         const preferredIPFSGateway = projectData.contract.preferredIPFSGateway;
@@ -203,7 +205,7 @@ const getProjectInfo = async (contract, projectId) => {
 };
 
 const getTokens = async (contract, projectId, lastTokenId) => {
-    const response = await graphQlCall(getProjectTokensQuery, { projectId: `${contract}-${projectId}`, lastTokenId: lastTokenId });
+    const response = await graphQlCall(getProjectTokensQuery, { projectId: abProjectID(contract, projectId), lastTokenId: lastTokenId });
 
     const tokens = response.data.data.project.tokens;
 
@@ -218,7 +220,7 @@ const getTokens = async (contract, projectId, lastTokenId) => {
 }
 
 const getDotTokens = async (contract, projectId, tokens) => {
-    const response = await graphQlCall(getDotsTokensQuery, { projectId: `${contract}-${projectId}`, dotTokenIds: tokens.map(token => token.toString()) });
+    const response = await graphQlCall(getDotsTokensQuery, { projectId: abProjectID(contract, projectId), dotTokenIds: tokens.map(token => token.toString()) });
 
     const dotTokens = response.data.data.project.tokens;
 
