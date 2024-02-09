@@ -4,7 +4,7 @@
   "description": "AWS lambda function to update composite datastore",
   "main": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm install && zip -r build/lambda-deployment-package.zip . -x '*.git*' -x '.env' -x 'README.md'"
   },
   "author": "",
   "license": "ISC",
