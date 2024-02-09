@@ -316,5 +316,3 @@ export const handler = async (event) => {
     console.log('No new tokens to process');
   }
 };
-
-handler();
