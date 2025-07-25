@@ -2,6 +2,7 @@
 build/
 
 # Monitoring and test outputs
+lambda-monitoring-report.txt
 monitoring/*.log
 monitoring/*.txt
 monitoring/lambda-monitoring-report.txt
