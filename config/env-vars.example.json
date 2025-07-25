@@ -1,0 +1,19 @@
+{
+  "Variables": {
+    "AB_GRAPH_ENDPOINT": "https://example.com/graph",
+    "ALCHEMY_KEY": "your-alchemy-key",
+    "DOTS_CONTRACT_ADDRESS": "0x0000000000000000000000000000000000000000",
+    "DOTS_MINTER_CONTRACT_ADDRESS": "0x0000000000000000000000000000000000000000",
+    "DOTS_PROJECT_ID": "0",
+    "HASURA_GRAPHQL_ENDPOINT": "https://example.com/graphql",
+    "NETWORK": "arbitrum-one",
+    "CHAIN_ID": "42161",
+    "PINATA_API_KEY": "your-pinata-api-key",
+    "PINATA_SECRET_API_KEY": "your-pinata-secret",
+    "PRIVATE_KEY": "your-private-key",
+    "PUBLIC_ADDRESS": "0x0000000000000000000000000000000000000000",
+    "RPC_PROVIDER_URL": "https://example.com/rpc",
+    "SECONDARY_CONTRACT_ADDRESS": "0x0000000000000000000000000000000000000000",
+    "SECONDARY_PROJECT_ID": "0"
+  }
+} 
